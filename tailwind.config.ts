@@ -8,9 +8,20 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        mono: ["var(--font-cascadia)", "monospace"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: {
+          purple: "var(--primary-purple)",
+          blue: "var(--primary-blue)",
+        },
+        secondary:{
+          purple: "var(--secondary-purple)",
+          lightBlue: "var(--secondary-light-blue)",
+        }
       },
     },
   },
