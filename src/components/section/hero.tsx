@@ -10,7 +10,7 @@ const SnakeGame = () => {
   const [gameOver, setGameOver] = useState(false);
 
   useEffect(() => {
-    const handleKeyPress = (e: { key: any; }) => {
+    const handleKeyPress = (e: KeyboardEvent) => {
       switch (e.key) {
         case "ArrowUp":
           setDirection("UP");
@@ -36,8 +36,8 @@ const SnakeGame = () => {
     if (gameOver) return;
     const moveSnake = setInterval(() => {
       setSnake((prev) => {
-        let newSnake = [...prev];
-        let head = [...newSnake[0]];
+        const newSnake = [...prev];
+        const head = [...newSnake[0]];
 
         switch (direction) {
           case "UP":
@@ -117,7 +117,7 @@ const HeroSection = () => {
         <h1 className="text-4xl font-bold text-primary-purple">Wilmer Pachon</h1>
         <h2 className="text-2xl text-secondary-lightBlue">Bringing ideas to life through code and design</h2>
         <p className="mt-4 text-foreground">
-          I'm a software developer who loves turning ideas into <span className="text-secondary-lightBlue"> interactive and engaging digital experiences! </span>  Whether it’s crafting smooth user interfaces or optimizing backend performance, I enjoy solving problems and bringing projects to life.
+          I&apos;m a software developer who loves turning ideas into <span className="text-secondary-lightBlue"> interactive and engaging digital experiences! </span>  Whether it&apos;s crafting smooth user interfaces or optimizing backend performance, I enjoy solving problems and bringing projects to life.
         </p>
       </div>
       <SnakeGame />

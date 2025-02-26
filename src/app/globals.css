@@ -27,6 +27,13 @@ body {
   font-family: Cascadia Code, Helvetica, sans-serif;
 }
 
-.github-logo:hover{
-  fill: red;
+.swiper-pagination{
+  position: relative !important;
+  margin-top: 1rem;
+}
+.swiper-pagination-bullet{
+  background: var(--primary-blue) !important;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.5rem;
 }

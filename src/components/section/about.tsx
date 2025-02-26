@@ -3,7 +3,7 @@ import profilePic from "../../../public/images/Profile.png"; // Adjust the path 
 
 const AboutMe = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between px-8 py-16 bg-background text-foreground max-w-6xl mx-auto">
+    <section className="flex flex-col md:flex-row items-center justify-between px-8 py-8 bg-background text-foreground max-w-6xl mx-auto">
     {/* Left Column - Text Content */}
     <div className="max-w-lg text-left">
       <h2 className="text-purple-400 text-4xl font-bold mb-4">About me</h2>
