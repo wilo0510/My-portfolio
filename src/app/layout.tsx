@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Navbar from "@/components/layout/Navbar";
+import Sidebar from "@/components/layout/SideBar";
 import "./globals.css";
 
 const cascadiaCode = localFont({
@@ -25,6 +26,7 @@ export default function RootLayout({
         className={`${cascadiaCode.variable} antialiased`}
       >
         <Navbar />
+        <Sidebar/>
         {children}
       </body>
     </html>
