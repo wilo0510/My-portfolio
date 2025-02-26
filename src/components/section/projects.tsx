@@ -73,13 +73,15 @@ return(
         {/* Image */}
 
         <div className="md:w-1/2 relative group">
-            <img 
-                src="/images/projects/chorezilla.jpeg" 
-                alt="Chore App" 
-                className="rounded-lg shadow-lg w-full"
-            />
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 group-hover:opacity-0 rounded-lg"></div>
+            <a href="https://github.com/wilo0510/LoginFunction" target="_blank" rel="noopener noreferrer">
+                <img 
+                    src="/images/projects/chorezilla.jpeg" 
+                    alt="Chore App" 
+                    className="rounded-lg shadow-lg w-full"
+                />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 group-hover:opacity-0 rounded-lg"></div>
+            </a>
         </div>
 
         {/* Project Info */}

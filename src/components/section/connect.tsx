@@ -12,11 +12,11 @@ const ConnectSection = () => {
         </p>
 
         <Button 
-            className="mt-6 text-lg w-60"
-            onClick={() => alert("Primary Clicked!")} 
-            variant="primary"
+          className="mt-6 text-lg w-60"
+          onClick={() => window.location.href = "mailto:wrpachonl@gmail.com?subject=Hello&body=Hi Wilmer,"} 
+          variant="primary"
         >
-            Say Hello
+          Say Hello
         </Button>
         {/* <a
           href="mailto:your.email@example.com"

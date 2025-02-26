@@ -1,5 +1,6 @@
 'use client'; 
 import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -9,6 +10,8 @@ export default function Navbar() {
 
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +26,16 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
+
+  const handleNavClick = (section: string) => {
+    if (pathname === "/") {
+      // If already on the home page, just scroll
+      document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // If on a different page, navigate to home first
+      router.push(`/#${section}`);
+    }
+  };
 
   return (
     <nav
@@ -41,18 +54,35 @@ export default function Navbar() {
         />
         </Link>
         <ul className="flex space-x-8 items-center">
-          <li className="hover:text-secondary-lightBlue align-middle"><a href="#about"><span className="text-primary-purple">{'<'}</span>About<span className="text-primary-purple">{'>'}</span></a></li>
-          <li className="hover:text-secondary-lightBlue"><a href="#experience"><span className="text-primary-purple">{'<'}</span>Experience<span className="text-primary-purple">{'>'}</span></a></li>
-          <li className="hover:text-secondary-lightBlue"><a href="#projects"><span className="text-primary-purple">{'<'}</span>Projects<span className="text-primary-purple">{'>'}</span></a></li>
-          <li className="hover:text-secondary-lightBlue"><a href="#contact"><span className="text-primary-purple">{'<'}</span>Contact<span className="text-primary-purple">{'>'}</span></a></li>
+          <li className="hover:text-secondary-lightBlue">
+            <button onClick={() => handleNavClick("about")}>
+              <span className="text-primary-purple">{"<"}</span>About
+              <span className="text-primary-purple">{">"}</span>
+            </button>
+          </li>
+          <li className="hover:text-secondary-lightBlue">
+            <button onClick={() => handleNavClick("experience")}>
+              <span className="text-primary-purple">{"<"}</span>Experience
+              <span className="text-primary-purple">{">"}</span>
+            </button>
+          </li>
+          <li className="hover:text-secondary-lightBlue">
+            <button onClick={() => handleNavClick("projects")}>
+              <span className="text-primary-purple">{"<"}</span>Projects
+              <span className="text-primary-purple">{">"}</span>
+            </button>
+          </li>
+          <li className="hover:text-secondary-lightBlue">
+            <button onClick={() => handleNavClick("contact")}>
+              <span className="text-primary-purple">{"<"}</span>Contact
+              <span className="text-primary-purple">{">"}</span>
+            </button>
+          </li>
           <li>
-            <Button 
-                onClick={() => alert("Primary Clicked!")} 
-                variant="primary"
-            >
-                Resume
+            <Button onClick={() => router.push("/resume")} variant="primary">
+              Resume
             </Button>
-            </li>
+          </li>
         </ul>
       </div>
     </nav>
