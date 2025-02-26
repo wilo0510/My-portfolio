@@ -109,7 +109,7 @@ const SnakeGame = () => {
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between px-8 py-16 bg-background text-foreground max-w-6xl mx-auto">
+    <div className="flex flex-col md:flex-row items-center justify-between px-8 py-8 bg-background text-foreground max-w-6xl mx-auto">
       <div className="max-w-lg text-left">
         <p className="mt-4 text-foreground">
            Hi!, My name is

@@ -4,6 +4,8 @@ import HeroSection from "@/components/section/hero";
 import AboutMe from "@/components/section/about";
 import Carousel from "@/components/section/carousel";
 import ExperienceSection from "@/components/section/experience";
+import ProjectsSection from "@/components/section/projects";
+import ConnectSection from "@/components/section/connect";
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
         <AboutMe />
         <Carousel />
         <ExperienceSection />
+        <ProjectsSection />
+        <ConnectSection />
         
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
