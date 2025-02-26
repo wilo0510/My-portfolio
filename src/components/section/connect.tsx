@@ -2,7 +2,7 @@ import Button from "@/components/ui/Button";
 
 const ConnectSection = () => {
     return (
-      <section className="flex flex-col items-center text-center text-white py-16 px-6 w-full">
+      <section id="contact" className="flex flex-col items-center text-center text-white py-16 px-6 w-full">
         <h4 className="text-sm uppercase tracking-wide text-gray-400">What's Next?</h4>
         <h2 className="text-4xl font-bold text-purple-400 mt-2">Let’s Connect!</h2>
         <p className="mt-4 max-w-2xl text-lg text-gray-300">

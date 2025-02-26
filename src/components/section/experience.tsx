@@ -32,7 +32,7 @@ export default function ExperienceSection() {
 
   return (
     <>
-    <h2 className="text-center w-full text-xl font-bold">
+    <h2 id="experience" className="text-center w-full text-xl font-bold">
         Where I’ve worked
         </h2>
     <div className="flex flex-col md:flex-row items-center justify-between px-8 py-8 bg-background text-foreground max-w-6xl mx-auto">
