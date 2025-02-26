@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Navbar from "@/components/layout/Navbar";
@@ -13,6 +14,7 @@ const cascadiaCode = localFont({
 export const metadata: Metadata = {
   title: "Wilmer Pachon",
   description: "Personal portfolio of Wilmer Pachon",
+  icons:"/favicon.ico",
 };
 
 export default function RootLayout({

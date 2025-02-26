@@ -21,6 +21,7 @@ export default {
         secondary:{
           purple: "var(--secondary-purple)",
           lightBlue: "var(--secondary-light-blue)",
+          background: "var(--secondary-background)",
         }
       },
     },
