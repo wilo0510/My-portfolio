@@ -18,12 +18,6 @@ const ConnectSection = () => {
         >
           Say Hello
         </Button>
-        {/* <a
-          href="mailto:your.email@example.com"
-          className="mt-6 px-6 py-3 border-2 border-purple-400 text-purple-400 text-lg font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition"
-        >
-          
-        </a> */}
       </section>
     );
   };
