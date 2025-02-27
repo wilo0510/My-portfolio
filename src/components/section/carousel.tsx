@@ -34,8 +34,8 @@ export default function TechnologiesCarousel() {
             disableOnInteraction: false, 
           }}
         breakpoints={{
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
+          640: { slidesPerView: 3 },
+          1024: { slidesPerView: 5 },
         }}
         pagination={{
             clickable: true,
@@ -45,7 +45,7 @@ export default function TechnologiesCarousel() {
       >
         {technologies.map((tech, index) => (
           <SwiperSlide key={index} className="flex flex-col items-center">
-            <div className="bg-gray-800 p-6 rounded-xl flex flex-col items-center h-40">
+            <div className="bg-secondary-background p-6 rounded-xl flex flex-col items-center h-40">
             <Image 
                 src={tech.src} 
                 alt={tech.name} 
