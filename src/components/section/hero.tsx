@@ -1,7 +1,6 @@
 'use client';
 import { useState, useEffect } from "react";
 import Button from "@/components/ui/Button";
-import Image from "next/image";
 
 const SnakeGame = () => {
   const [snake, setSnake] = useState([[5, 5]]);
