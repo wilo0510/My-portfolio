@@ -15,12 +15,12 @@ const AboutMe = () => {
       </p>
 
       <p className="mt-4">
-        Fast-forward to today, I’ve had the opportunity to work on diverse
+        Fast-forward to today, I&apos;ve had the opportunity to work on diverse
         projects,{" "}
         <span className="text-cyan-400">
           from internal business solutions to frontend architectures
         </span>{" "}
-        that enhance accessibility and performance. I’ve contributed to{" "}
+        that enhance accessibility and performance. I&apos;ve contributed to{" "}
         <span className="text-cyan-400">
           fraud detection platforms, security ecosystems, and UI/UX
           improvements
@@ -30,8 +30,8 @@ const AboutMe = () => {
       </p>
 
       <p className="mt-4">
-        Currently, I’m expanding my expertise in UI/UX design to build more
-        intuitive, user-friendly applications. I’m always looking for new
+        Currently, I&apos;m expanding my expertise in UI/UX design to build more
+        intuitive, user-friendly applications. I&apos;m always looking for new
         challenges and innovative ways to create engaging digital
         experiences.
       </p>
