@@ -3,8 +3,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import Image from "next/image";
-
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Pagination, Autoplay } from "swiper/modules";
 
 export default function TechnologiesCarousel() {
   const technologies = [
@@ -22,43 +21,39 @@ export default function TechnologiesCarousel() {
     { name: "New Relic", src: "/images/technologies/Newrelic.png" },
   ];
 
-
   return (
-    <div className="w-full max-w-screen-lg mx-auto overflow-hidden text-center">
-      <h2 className="text-xl font-bold mb-4">Technologies</h2>
+    <div className="w-full max-w-screen-lg mx-auto overflow-hidden text-center px-4">
+      <h2 className="text-xl md:text-2xl font-bold mb-4 text-white">Technologies</h2>
       <Swiper
         spaceBetween={20}
-        slidesPerView={5}
+        slidesPerView={1}
         autoplay={{
-            delay: 2000, 
-            disableOnInteraction: false, 
-          }}
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
         breakpoints={{
+          480: { slidesPerView: 2 },
           640: { slidesPerView: 3 },
           1024: { slidesPerView: 5 },
         }}
-        pagination={{
-            clickable: true,
-        }}
-        modules={[Pagination,Autoplay]}
-        className="w-full"
+        pagination={{ clickable: true }}
+        modules={[Pagination, Autoplay]}
+        className="technologies-carousel w-full"
       >
         {technologies.map((tech, index) => (
           <SwiperSlide key={index} className="flex flex-col items-center">
-            <div className="bg-secondary-background p-6 rounded-xl flex flex-col items-center h-40">
-            <Image 
-                src={tech.src} 
-                alt={tech.name} 
-                width={0} 
-                height={0} 
-                sizes="100vw" 
-                className="w-auto h-16"
-            />
-              <p className="text-white font-mono">{tech.name}</p>
+            <div className="bg-secondary-background p-4 md:p-6 rounded-xl flex flex-col items-center h-36 md:h-40 shadow-lg">
+              <Image
+                src={tech.src}
+                alt={tech.name}
+                width={64}
+                height={64}
+                className="w-16 md:w-20 h-auto"
+              />
+              <p className="text-white font-mono text-sm md:text-base">{tech.name}</p>
             </div>
           </SwiperSlide>
         ))}
-        <div className="swiper-pagination absolute bottom-0 left-0 w-full z-[-1]"></div>
       </Swiper>
     </div>
   );

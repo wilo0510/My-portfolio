@@ -6,7 +6,7 @@ const experiences = [
     company: "Mercado Libre Colombia",
     position: "SSr Software Development Analyst",
     date: "Jul 2021 - Sept 2024",
-    link:"https://www.mercadolibre.com.co/",
+    link: "https://www.mercadolibre.com.co/",
     details: [
       "Designed and developed responsive single-page applications using React, improving user experience across desktop and mobile platforms.",
       "Collaborated with cross-functional teams to optimize server performance, achieving a 50% reduction in response times.",
@@ -17,9 +17,9 @@ const experiences = [
     company: "Puntored",
     position: "Fullstack Developer",
     date: "Sept 2020 - Jul 2021",
-    link:"https://puntored.co/en/",
+    link: "https://puntored.co/en/",
     details: [
-      "Led UX improvements, enhancing user satisfaction by 30% through optimized design and functionality using Vue.js",
+      "Led UX improvements, enhancing user satisfaction by 30% through optimized design and functionality using Vue.js.",
       "Conducted code reviews, improving software reliability by 10% and ensuring platform consistency.",
       "Improved team collaboration by providing clear feedback during code reviews.",
       "Ensured alignment of design and development standards across multiple projects.",
@@ -32,58 +32,54 @@ export default function ExperienceSection() {
 
   return (
     <>
-    <h2 id="experience" className="text-center w-full text-xl font-bold">
+      <h2 id="experience" className="text-center w-full text-xl md:text-2xl font-bold mb-6">
         Where I’ve worked
-        </h2>
-    <div className="flex flex-col md:flex-row items-center justify-between px-8 py-8 bg-background text-foreground max-w-6xl mx-auto">
-        
-      {/* Left Side - Job List */}
-      <div className="flex flex-col space-y-4 md:w-1/3 self-start">
-        {experiences.map((job, index) => (
-          <button
-            key={index}
-            className={`text-lg font-mono transition-all ${
-              selectedJob.company === job.company
-                ? "text-cyan-400"
-                : "text-gray-400 hover:text-cyan-300"
-            }`}
-            onClick={() => setSelectedJob(job)}
-          >
-            {job.company}
-          </button>
-        ))}
-      </div>
+      </h2>
 
-      {/* Right Side - Job Details */}
-      <motion.div
-        key={selectedJob.company}
-        className="lg:2-2/3 md:w-2/3 space-y-4 min-w-[725px]"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: -20 }}
-        transition={{ duration: 0.3 }}
-      >
-        <h3 className="text-xl font-bold">{selectedJob.position}</h3>
-        <a
-            href={selectedJob.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between px-6 md:px-8 py-6 bg-background text-foreground max-w-6xl mx-auto">
+        
+        {/* Left Side - Job List */}
+        <div className="flex flex-col space-y-4 md:w-1/3 w-full text-center md:text-left my-5">
+          {experiences.map((job, index) => (
+            <button
+              key={index}
+              className={`text-lg font-mono transition-all ${
+                selectedJob.company === job.company
+                  ? "text-cyan-400"
+                  : "text-gray-400 hover:text-cyan-300"
+              }`}
+              onClick={() => setSelectedJob(job)}
+            >
+              {job.company}
+            </button>
+          ))}
+        </div>
+
+        {/* Right Side - Job Details */}
+        <motion.div
+          key={selectedJob.company}
+          className="w-full md:w-2/3 space-y-4"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -20 }}
+          transition={{ duration: 0.3 }}
+        >
+          <h3 className="text-lg md:text-xl font-bold">{selectedJob.position}</h3>
+          <a href={selectedJob.link} target="_blank" rel="noopener noreferrer">
             <p className="text-cyan-400 font-mono">@{selectedJob.company}</p>
           </a>
-        
-        <p className="text-gray-400">{selectedJob.date}</p>
+          <p className="text-gray-400 text-sm md:text-base">{selectedJob.date}</p>
 
-        <ul className="space-y-2">
-          {selectedJob.details.map((detail, i) => (
-            <li key={i} className="flex items-start space-x-2">
-              <span className="text-cyan-400">➤</span>
-              <p>{detail}</p>
-            </li>
-          ))}
-        </ul>
-      </motion.div>
-    </div>
+          <ul className="space-y-2 text-sm md:text-base">
+            {selectedJob.details.map((detail, i) => (
+              <li key={i} className="flex items-start space-x-2">
+                <span className="text-cyan-400">➤</span>
+                <p>{detail}</p>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+      </div>
     </>
   );
 }

@@ -5,7 +5,7 @@ return(
     <h2 id='projects' className="text-purple-400 text-4xl font-bold mb-4 px-8 mx-12">
         Some things I’ve built
     </h2>
-    <section className="flex flex-col md:flex-row items-center justify-between px-8 py-8 bg-background text-foreground max-w-6xl mx-auto px-8">
+    <section className="flex flex-col gap-x-4 md:flex-row items-center justify-between px-8 py-8 bg-background text-foreground max-w-6xl mx-auto">
     {/* Title */}
     
 
@@ -26,7 +26,7 @@ return(
         </Link>
 
         {/* Project Info */}
-        <div className="md:w-1/2 bg-secondary-background text-white p-6 rounded-lg shadow-lg -ml-20 z-10 text-right">
+        <div className="md:w-1/2 bg-secondary-background text-white p-6 rounded-lg shadow-lg md:-ml-20 md:text-right max-w-full z-10">
             <h3 className="text-xl font-semibold">Bankaroo</h3>
             <p className="mt-2 text-sm">
             A modern personal finance app that helps users track spending, manage budgets, and make eco-conscious financial decisions. The app integrates a unique sustainability impact feature, allowing users to see the environmental footprint of their purchases. With an intuitive UI, seamless transaction tracking, and personalized financial insights, it empowers users to make smarter and greener financial choices.
@@ -85,7 +85,7 @@ return(
         </div>
 
         {/* Project Info */}
-        <div className="md:w-1/2 bg-secondary-background text-white p-6 rounded-lg shadow-lg -ml-20 z-10 text-right">
+        <div className="md:w-1/2 bg-secondary-background text-white p-6 rounded-lg shadow-lg md:-ml-20 md:text-right max-w-full z-10">
             <h3 className="text-xl font-semibold">Simple login</h3>
             <p className="mt-2 text-sm">
             Designed a simple yet efficient login system for a home chore management app, allowing roommates to securely access their accounts and track shared responsibilities. The authentication process ensures a smooth user experience with intuitive UI elements, keeping household organization seamless and collaborative.
